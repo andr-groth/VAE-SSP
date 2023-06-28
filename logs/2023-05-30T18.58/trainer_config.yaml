@@ -1,0 +1,79 @@
+__notes__:
+  k_trend: 17
+  k_pair:
+  - 6
+  - 23
+beta_scheduler:
+  class_name: LogisticGrowth
+  config:
+    dtype: float32
+    midpoint: 5
+    rate: 1
+    upper: 50
+data:
+  dtype: float32
+  filename:
+  - data/cmip6/ssp/pr/pcs/pcs*.nc
+  - data/cmip6/ssp/tos/pcs/pcs*.nc
+  level_range:
+  - - 20
+  - - 20
+  time_interval:
+  - '2015-01-01'
+  - '2099-12-31'
+fit_generator:
+  __version__: '2022-06-04'
+  batch_size: 128
+  dtype: float32
+  ensemble_size: 29
+  ensemble_type: index
+  input_length: 12
+  prediction_length: 12
+  random_seed: 2
+  repeat_samples: 5
+  shuffle: true
+  strides: 1
+  tp_period: 12
+  validation_split: 70
+forcing:
+  filename: data/cmip6/ssp/forcings/SSP_CMIP6_world_C02.csv
+  input_length: 16
+  scale: 1.0e-05
+model:
+  __version__: '2022-09-08'
+  activation: swish
+  beta: beta
+  cond_activation:
+  - swish
+  - linear
+  cond_ens_size: 6
+  cond_size:
+  - 28
+  - 29
+  cond_units:
+  - 64
+  - 24
+  cond_use_scale: false
+  delta: 1
+  encoder_blocks: 2
+  fc_activation: tanh
+  fc_units: 64
+  film_temporal: true
+  filters: 64
+  gamma: 3
+  input_shape:
+  - 12
+  - 40
+  latent_dim: 32
+  learning_rate: 0.002
+  padding_blocks: 1
+  pooling: null
+  prediction_shape:
+  - 12
+  - 40
+  repeat_samples: 5
+  residual_units: 1
+  set_size: 1
+model_fit:
+  epochs: 25
+prediction: {}
