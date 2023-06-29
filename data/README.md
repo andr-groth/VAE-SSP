@@ -24,7 +24,7 @@ The data in the `forcings/` folder is based on the CMIP6 SSP forcing data from:
 
 ### Crop data
 
-The data in the `crop/` folder is based on the GGCMI crop calendar Phase 3 dataset, which is available at:
+The data in the `crop/` folder is based on the [GGCMI crop calendar Phase 3](https://doi.org/10.1038/s43016-021-00400-y) dataset, which is available at:
 
 > https://zenodo.org/record/5062513
 
