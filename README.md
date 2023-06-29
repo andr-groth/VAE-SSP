@@ -24,7 +24,3 @@ The VAE framework is based on Groth & Chavez (2023). _submitted_.
 ## Examples
 
 For example runs of the Jupyter notebooks see the `examples/` folder of this repository. The examples are based on the sample data in the `data/` folder.
-
-- Example of training a VAE a range of different GHG emission scenarios: [`VAEp_train.ipynb`](https://github.com/andr-groth/VAE-SSP/blob/main/examples/VAEp_train.md)
-
-- Example of exploring a VAE to make predictions on new GHG emission scenarios: [`VAEp_explore.ipynb`](https://github.com/andr-groth/VAE-SSP/blob/main/examples/VAEp_explore.md)
