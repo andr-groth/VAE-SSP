@@ -22,6 +22,12 @@ The data in the `forcings/` folder is based on the CMIP6 SSP forcing data from:
 
 > Riahi et al. (2017). The Shared Socioeconomic Pathways and their energy, land use, and greenhouse gas emissions implications: An overview. _Global Environmental Change_, __42__, 153-168. https://doi.org/10.1016/j.gloenvcha.2016.05.009.
 
+### Crop data
+
+The data in the `crop/` folder is based on the GGCMI crop calendar Phase 3 dataset, which is available at:
+
+> https://zenodo.org/record/5062513
+
 ## Data preparation
 
 ### CMIP6
@@ -33,3 +39,7 @@ The data preparation of the CMIP6 data involves the following steps:
 3. Create the anomalies, EOFs and PCs with the help of the `prepare_data.sh` script from the CDO-scripts repository.
 
 The configuration of the `prepare_data.sh` script is stored in `anom.cfg` files in the variable subfolders, .i.e, `cmip6/ssp/pr/anom.cfg` for precipitation and `cmip6/ssp/tos/anom.cfg` for sea-surface temperature.
+
+### Crop data
+
+The data has been projected onto the CMIP6 EOFs with the help of the CDO tool `cdo remapcon`.
