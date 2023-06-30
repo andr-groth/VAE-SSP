@@ -276,7 +276,7 @@ _variables, _dimensions, _attributes = fileio.read_netcdf_multi(**params.data, n
 
     data\cmip6\ssp\pr\pcs\pcs*.nc  : 100 file(s) found.
     data\cmip6\ssp\tos\pcs\pcs*.nc : 100 file(s) found.
-    200/200 [==============================] - 20s 101ms/file
+    200/200 [==============================] - 21s 104ms/file
     
 
 We group the netCDF files and their variables by the global attributes `source_id` + `experiment_id`. The attribute `source_id` refers to the model name (e.g. `ACCESS-CM2`) and the attribute `experiment_id` to the experiment (e.g. `ssp126`).
@@ -1363,7 +1363,7 @@ _eof_variables, _eof_dimensions, _eof_attributes = fileio.read_netcdf_multi(file
 
     data\cmip6\ssp\pr\pcs\eofs.nc  : 1 file(s) found.
     data\cmip6\ssp\tos\pcs\eofs.nc : 1 file(s) found.
-    2/2 [==============================] - 0s 16ms/file
+    2/2 [==============================] - 0s 30ms/file
     
 
 
@@ -1393,7 +1393,7 @@ _mean_variables, _mean_dimensions, _mean_attributes = fileio.read_netcdf_multi(f
 
     data\cmip6\ssp\pr\mean\*.nc  : 100 file(s) found.
     data\cmip6\ssp\tos\mean\*.nc : 100 file(s) found.
-    200/200 [==============================] - 3s 14ms/file
+    200/200 [==============================] - 3s 15ms/file
     
 
 We group the netCDF files and their variables by the global attributes `source_id` + `experiment_id`, as for the CMIP data.
@@ -1461,335 +1461,331 @@ display(
 
 
 <style type="text/css">
-#T_5ee3b_row0_col0 {
+#T_d6af5_row0_col0 {
   background-color: #dd5f4b;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row0_col1, #T_5ee3b_row0_col2, #T_5ee3b_row0_col3, #T_5ee3b_row1_col0 {
+#T_d6af5_row0_col1, #T_d6af5_row0_col2, #T_d6af5_row0_col3, #T_d6af5_row1_col0 {
   background-color: #b40426;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row1_col1, #T_5ee3b_row2_col3 {
+#T_d6af5_row1_col1, #T_d6af5_row2_col3 {
   background-color: #d0473d;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row1_col2 {
+#T_d6af5_row1_col2 {
   background-color: #bd1f2d;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row1_col3 {
+#T_d6af5_row1_col3 {
   background-color: #d24b40;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row2_col0 {
+#T_d6af5_row2_col0 {
   background-color: #e9785d;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row2_col1 {
+#T_d6af5_row2_col1 {
   background-color: #de614d;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row2_col2 {
+#T_d6af5_row2_col2 {
   background-color: #df634e;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row3_col0 {
+#T_d6af5_row3_col0 {
   background-color: #f39778;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row3_col1, #T_5ee3b_row5_col2, #T_5ee3b_row5_col3 {
+#T_d6af5_row3_col1, #T_d6af5_row5_col2, #T_d6af5_row5_col3 {
   background-color: #f0cdbb;
   color: #000000;
 }
-#T_5ee3b_row3_col2 {
+#T_d6af5_row3_col2 {
   background-color: #ef886b;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row3_col3 {
+#T_d6af5_row3_col3 {
   background-color: #f7b89c;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row4_col0 {
+#T_d6af5_row4_col0 {
   background-color: #f3c7b1;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row4_col1 {
+#T_d6af5_row4_col1 {
   background-color: #f1ccb8;
   color: #000000;
 }
-#T_5ee3b_row4_col2 {
+#T_d6af5_row4_col2 {
   background-color: #f3c8b2;
   color: #000000;
 }
-#T_5ee3b_row4_col3 {
+#T_d6af5_row4_col3 {
   background-color: #f5c0a7;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row5_col0, #T_5ee3b_row10_col3 {
+#T_d6af5_row5_col0, #T_d6af5_row10_col3 {
   background-color: #d7dce3;
   color: #000000;
 }
-#T_5ee3b_row5_col1 {
+#T_d6af5_row5_col1 {
   background-color: #f7ac8e;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row6_col0 {
-  background-color: #edd2c3;
+#T_d6af5_row6_col0, #T_d6af5_row9_col2 {
+  background-color: #ecd3c5;
   color: #000000;
 }
-#T_5ee3b_row6_col1 {
+#T_d6af5_row6_col1 {
   background-color: #f08b6e;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row6_col2, #T_5ee3b_row13_col2 {
+#T_d6af5_row6_col2, #T_d6af5_row13_col2 {
   background-color: #d4dbe6;
   color: #000000;
 }
-#T_5ee3b_row6_col3, #T_5ee3b_row9_col3 {
+#T_d6af5_row6_col3, #T_d6af5_row9_col3 {
   background-color: #d3dbe7;
   color: #000000;
 }
-#T_5ee3b_row7_col0 {
+#T_d6af5_row7_col0 {
   background-color: #f3c7b1;
   color: #000000;
 }
-#T_5ee3b_row7_col1 {
+#T_d6af5_row7_col1 {
   background-color: #cdd9ec;
   color: #000000;
 }
-#T_5ee3b_row7_col2 {
+#T_d6af5_row7_col2 {
   background-color: #f7ac8e;
   color: #000000;
 }
-#T_5ee3b_row7_col3, #T_5ee3b_row10_col0 {
+#T_d6af5_row7_col3, #T_d6af5_row10_col0 {
   background-color: #e6d7cf;
   color: #000000;
 }
-#T_5ee3b_row8_col0, #T_5ee3b_row11_col0, #T_5ee3b_row12_col3 {
+#T_d6af5_row8_col0, #T_d6af5_row11_col0, #T_d6af5_row12_col3, #T_d6af5_row15_col3 {
   background-color: #c7d7f0;
   color: #000000;
 }
-#T_5ee3b_row8_col1, #T_5ee3b_row8_col3, #T_5ee3b_row14_col0, #T_5ee3b_row14_col1, #T_5ee3b_row14_col2, #T_5ee3b_row18_col0, #T_5ee3b_row18_col1, #T_5ee3b_row18_col2, #T_5ee3b_row19_col2, #T_5ee3b_row20_col0, #T_5ee3b_row20_col1, #T_5ee3b_row20_col2 {
+#T_d6af5_row8_col1, #T_d6af5_row8_col3, #T_d6af5_row14_col0, #T_d6af5_row14_col1, #T_d6af5_row14_col2, #T_d6af5_row18_col0, #T_d6af5_row18_col1, #T_d6af5_row18_col2, #T_d6af5_row19_col2, #T_d6af5_row20_col0, #T_d6af5_row20_col1, #T_d6af5_row20_col2 {
   background-color: #000000;
   color: #000000;
 }
-#T_5ee3b_row8_col2 {
+#T_d6af5_row8_col2 {
   background-color: #f7aa8c;
   color: #000000;
   font-weight: 900;
 }
-#T_5ee3b_row9_col0 {
+#T_d6af5_row9_col0 {
   background-color: #efcfbf;
   color: #000000;
 }
-#T_5ee3b_row9_col1 {
+#T_d6af5_row9_col1 {
   background-color: #edd1c2;
   color: #000000;
 }
-#T_5ee3b_row9_col2 {
-  background-color: #ecd3c5;
-  color: #000000;
-}
-#T_5ee3b_row10_col1 {
+#T_d6af5_row10_col1 {
   background-color: #aec9fc;
   color: #000000;
 }
-#T_5ee3b_row10_col2 {
+#T_d6af5_row10_col2 {
   background-color: #dedcdb;
   color: #000000;
 }
-#T_5ee3b_row11_col1 {
+#T_d6af5_row11_col1 {
   background-color: #b9d0f9;
   color: #000000;
 }
-#T_5ee3b_row11_col2 {
+#T_d6af5_row11_col2 {
   background-color: #d8dce2;
   color: #000000;
 }
-#T_5ee3b_row11_col3 {
+#T_d6af5_row11_col3 {
   background-color: #e2dad5;
   color: #000000;
 }
-#T_5ee3b_row12_col0 {
+#T_d6af5_row12_col0 {
   background-color: #dcdddd;
   color: #000000;
 }
-#T_5ee3b_row12_col1 {
+#T_d6af5_row12_col1 {
   background-color: #b1cbfc;
   color: #000000;
 }
-#T_5ee3b_row12_col2 {
+#T_d6af5_row12_col2 {
   background-color: #e4d9d2;
   color: #000000;
 }
-#T_5ee3b_row13_col0 {
+#T_d6af5_row13_col0 {
   background-color: #bad0f8;
   color: #000000;
 }
-#T_5ee3b_row13_col1 {
+#T_d6af5_row13_col1 {
   background-color: #e1dad6;
   color: #000000;
 }
-#T_5ee3b_row13_col3, #T_5ee3b_row14_col3, #T_5ee3b_row16_col3 {
+#T_d6af5_row13_col3, #T_d6af5_row14_col3 {
   background-color: #c5d6f2;
   color: #000000;
 }
-#T_5ee3b_row15_col0 {
+#T_d6af5_row15_col0 {
   background-color: #c1d4f4;
   color: #000000;
 }
-#T_5ee3b_row15_col1 {
+#T_d6af5_row15_col1 {
   background-color: #a1c0ff;
   color: #000000;
 }
-#T_5ee3b_row15_col2 {
+#T_d6af5_row15_col2, #T_d6af5_row17_col2 {
   background-color: #ccd9ed;
   color: #000000;
 }
-#T_5ee3b_row15_col3 {
-  background-color: #c9d7f0;
-  color: #000000;
-}
-#T_5ee3b_row16_col0, #T_5ee3b_row18_col3 {
+#T_d6af5_row16_col0, #T_d6af5_row18_col3 {
   background-color: #a6c4fe;
   color: #000000;
 }
-#T_5ee3b_row16_col1 {
+#T_d6af5_row16_col1 {
   background-color: #b2ccfb;
   color: #000000;
 }
-#T_5ee3b_row16_col2 {
+#T_d6af5_row16_col2 {
   background-color: #c6d6f1;
   color: #000000;
 }
-#T_5ee3b_row17_col0 {
+#T_d6af5_row16_col3 {
+  background-color: #c4d5f3;
+  color: #000000;
+}
+#T_d6af5_row17_col0 {
   background-color: #bbd1f8;
   color: #000000;
 }
-#T_5ee3b_row17_col1 {
-  background-color: #85a8fc;
+#T_d6af5_row17_col1 {
+  background-color: #86a9fc;
   color: #000000;
 }
-#T_5ee3b_row17_col2 {
-  background-color: #cbd8ee;
-  color: #000000;
-}
-#T_5ee3b_row17_col3 {
+#T_d6af5_row17_col3 {
   background-color: #b3cdfb;
   color: #000000;
 }
-#T_5ee3b_row19_col0 {
+#T_d6af5_row19_col0 {
   background-color: #98b9ff;
   color: #000000;
 }
-#T_5ee3b_row19_col1 {
+#T_d6af5_row19_col1 {
   background-color: #a3c2fe;
   color: #000000;
 }
-#T_5ee3b_row19_col3 {
+#T_d6af5_row19_col3 {
   background-color: #a9c6fd;
   color: #000000;
 }
-#T_5ee3b_row20_col3, #T_5ee3b_row22_col1, #T_5ee3b_row23_col0 {
-  background-color: #94b6ff;
+#T_d6af5_row20_col3 {
+  background-color: #93b5fe;
   color: #000000;
 }
-#T_5ee3b_row21_col0 {
+#T_d6af5_row21_col0 {
   background-color: #b7cff9;
   color: #000000;
 }
-#T_5ee3b_row21_col1 {
+#T_d6af5_row21_col1 {
   background-color: #84a7fc;
   color: #000000;
 }
-#T_5ee3b_row21_col2 {
+#T_d6af5_row21_col2 {
   background-color: #92b4fe;
   color: #000000;
 }
-#T_5ee3b_row21_col3 {
+#T_d6af5_row21_col3 {
   background-color: #8db0fe;
   color: #000000;
 }
-#T_5ee3b_row22_col0 {
+#T_d6af5_row22_col0 {
   background-color: #7a9df8;
   color: #000000;
 }
-#T_5ee3b_row22_col2, #T_5ee3b_row22_col3 {
+#T_d6af5_row22_col1, #T_d6af5_row23_col0 {
+  background-color: #94b6ff;
+  color: #000000;
+}
+#T_d6af5_row22_col2, #T_d6af5_row22_col3 {
   background-color: #9bbcff;
   color: #000000;
 }
-#T_5ee3b_row23_col1 {
+#T_d6af5_row23_col1 {
   background-color: #81a4fb;
   color: #000000;
 }
-#T_5ee3b_row23_col2 {
+#T_d6af5_row23_col2 {
   background-color: #779af7;
   color: #000000;
 }
-#T_5ee3b_row23_col3 {
-  background-color: #97b8ff;
+#T_d6af5_row23_col3 {
+  background-color: #96b7ff;
   color: #000000;
 }
-#T_5ee3b_row24_col0 {
+#T_d6af5_row24_col0 {
   background-color: #7699f6;
   color: #000000;
 }
-#T_5ee3b_row24_col1, #T_5ee3b_row24_col3, #T_5ee3b_row27_col2 {
+#T_d6af5_row24_col1, #T_d6af5_row24_col3, #T_d6af5_row27_col2 {
   background-color: #455cce;
   color: #000000;
 }
-#T_5ee3b_row24_col2, #T_5ee3b_row25_col1 {
+#T_d6af5_row24_col2, #T_d6af5_row25_col1 {
   background-color: #485fd1;
   color: #000000;
 }
-#T_5ee3b_row25_col0 {
+#T_d6af5_row25_col0 {
   background-color: #4b64d5;
   color: #000000;
 }
-#T_5ee3b_row25_col2 {
+#T_d6af5_row25_col2 {
   background-color: #536edd;
   color: #000000;
 }
-#T_5ee3b_row25_col3 {
+#T_d6af5_row25_col3 {
   background-color: #4358cb;
   color: #000000;
 }
-#T_5ee3b_row26_col0 {
+#T_d6af5_row26_col0 {
   background-color: #6180e9;
   color: #000000;
 }
-#T_5ee3b_row26_col1, #T_5ee3b_row26_col2, #T_5ee3b_row26_col3, #T_5ee3b_row27_col0, #T_5ee3b_row27_col1 {
+#T_d6af5_row26_col1, #T_d6af5_row26_col2, #T_d6af5_row26_col3, #T_d6af5_row27_col0, #T_d6af5_row27_col1 {
   background-color: #3b4cc0;
   color: #000000;
 }
-#T_5ee3b_row27_col3 {
+#T_d6af5_row27_col3 {
   background-color: #3f53c6;
   color: #000000;
 }
 </style>
-<table id="T_5ee3b">
+<table id="T_d6af5">
   <thead>
     <tr>
       <th class="index_name level0" >experiment_id</th>
-      <th id="T_5ee3b_level0_col0" class="col_heading level0 col0" >ssp126</th>
-      <th id="T_5ee3b_level0_col1" class="col_heading level0 col1" >ssp245</th>
-      <th id="T_5ee3b_level0_col2" class="col_heading level0 col2" >ssp370</th>
-      <th id="T_5ee3b_level0_col3" class="col_heading level0 col3" >ssp585</th>
+      <th id="T_d6af5_level0_col0" class="col_heading level0 col0" >ssp126</th>
+      <th id="T_d6af5_level0_col1" class="col_heading level0 col1" >ssp245</th>
+      <th id="T_d6af5_level0_col2" class="col_heading level0 col2" >ssp370</th>
+      <th id="T_d6af5_level0_col3" class="col_heading level0 col3" >ssp585</th>
     </tr>
     <tr>
       <th class="index_name level0" >source_id</th>
@@ -1801,200 +1797,200 @@ display(
   </thead>
   <tbody>
     <tr>
-      <th id="T_5ee3b_level0_row0" class="row_heading level0 row0" >NorESM2-MM</th>
-      <td id="T_5ee3b_row0_col0" class="data row0 col0" >0.23</td>
-      <td id="T_5ee3b_row0_col1" class="data row0 col1" >0.26</td>
-      <td id="T_5ee3b_row0_col2" class="data row0 col2" >0.26</td>
-      <td id="T_5ee3b_row0_col3" class="data row0 col3" >0.26</td>
+      <th id="T_d6af5_level0_row0" class="row_heading level0 row0" >NorESM2-MM</th>
+      <td id="T_d6af5_row0_col0" class="data row0 col0" >0.23</td>
+      <td id="T_d6af5_row0_col1" class="data row0 col1" >0.26</td>
+      <td id="T_d6af5_row0_col2" class="data row0 col2" >0.26</td>
+      <td id="T_d6af5_row0_col3" class="data row0 col3" >0.26</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row1" class="row_heading level0 row1" >CESM2-WACCM</th>
-      <td id="T_5ee3b_row1_col0" class="data row1 col0" >0.25</td>
-      <td id="T_5ee3b_row1_col1" class="data row1 col1" >0.25</td>
-      <td id="T_5ee3b_row1_col2" class="data row1 col2" >0.25</td>
-      <td id="T_5ee3b_row1_col3" class="data row1 col3" >0.25</td>
+      <th id="T_d6af5_level0_row1" class="row_heading level0 row1" >CESM2-WACCM</th>
+      <td id="T_d6af5_row1_col0" class="data row1 col0" >0.25</td>
+      <td id="T_d6af5_row1_col1" class="data row1 col1" >0.25</td>
+      <td id="T_d6af5_row1_col2" class="data row1 col2" >0.25</td>
+      <td id="T_d6af5_row1_col3" class="data row1 col3" >0.25</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row2" class="row_heading level0 row2" >NorESM2-LM</th>
-      <td id="T_5ee3b_row2_col0" class="data row2 col0" >0.23</td>
-      <td id="T_5ee3b_row2_col1" class="data row2 col1" >0.24</td>
-      <td id="T_5ee3b_row2_col2" class="data row2 col2" >0.24</td>
-      <td id="T_5ee3b_row2_col3" class="data row2 col3" >0.25</td>
+      <th id="T_d6af5_level0_row2" class="row_heading level0 row2" >NorESM2-LM</th>
+      <td id="T_d6af5_row2_col0" class="data row2 col0" >0.23</td>
+      <td id="T_d6af5_row2_col1" class="data row2 col1" >0.24</td>
+      <td id="T_d6af5_row2_col2" class="data row2 col2" >0.24</td>
+      <td id="T_d6af5_row2_col3" class="data row2 col3" >0.25</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row3" class="row_heading level0 row3" >FGOALS-f3-L</th>
-      <td id="T_5ee3b_row3_col0" class="data row3 col0" >0.22</td>
-      <td id="T_5ee3b_row3_col1" class="data row3 col1" >0.20</td>
-      <td id="T_5ee3b_row3_col2" class="data row3 col2" >0.23</td>
-      <td id="T_5ee3b_row3_col3" class="data row3 col3" >0.21</td>
+      <th id="T_d6af5_level0_row3" class="row_heading level0 row3" >FGOALS-f3-L</th>
+      <td id="T_d6af5_row3_col0" class="data row3 col0" >0.22</td>
+      <td id="T_d6af5_row3_col1" class="data row3 col1" >0.20</td>
+      <td id="T_d6af5_row3_col2" class="data row3 col2" >0.23</td>
+      <td id="T_d6af5_row3_col3" class="data row3 col3" >0.21</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row4" class="row_heading level0 row4" >MIROC6</th>
-      <td id="T_5ee3b_row4_col0" class="data row4 col0" >0.20</td>
-      <td id="T_5ee3b_row4_col1" class="data row4 col1" >0.20</td>
-      <td id="T_5ee3b_row4_col2" class="data row4 col2" >0.21</td>
-      <td id="T_5ee3b_row4_col3" class="data row4 col3" >0.21</td>
+      <th id="T_d6af5_level0_row4" class="row_heading level0 row4" >MIROC6</th>
+      <td id="T_d6af5_row4_col0" class="data row4 col0" >0.20</td>
+      <td id="T_d6af5_row4_col1" class="data row4 col1" >0.20</td>
+      <td id="T_d6af5_row4_col2" class="data row4 col2" >0.21</td>
+      <td id="T_d6af5_row4_col3" class="data row4 col3" >0.21</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row5" class="row_heading level0 row5" >IITM-ESM</th>
-      <td id="T_5ee3b_row5_col0" class="data row5 col0" >0.18</td>
-      <td id="T_5ee3b_row5_col1" class="data row5 col1" >0.22</td>
-      <td id="T_5ee3b_row5_col2" class="data row5 col2" >0.21</td>
-      <td id="T_5ee3b_row5_col3" class="data row5 col3" >0.20</td>
+      <th id="T_d6af5_level0_row5" class="row_heading level0 row5" >IITM-ESM</th>
+      <td id="T_d6af5_row5_col0" class="data row5 col0" >0.18</td>
+      <td id="T_d6af5_row5_col1" class="data row5 col1" >0.22</td>
+      <td id="T_d6af5_row5_col2" class="data row5 col2" >0.21</td>
+      <td id="T_d6af5_row5_col3" class="data row5 col3" >0.20</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row6" class="row_heading level0 row6" >MRI-ESM2-0</th>
-      <td id="T_5ee3b_row6_col0" class="data row6 col0" >0.19</td>
-      <td id="T_5ee3b_row6_col1" class="data row6 col1" >0.23</td>
-      <td id="T_5ee3b_row6_col2" class="data row6 col2" >0.19</td>
-      <td id="T_5ee3b_row6_col3" class="data row6 col3" >0.19</td>
+      <th id="T_d6af5_level0_row6" class="row_heading level0 row6" >MRI-ESM2-0</th>
+      <td id="T_d6af5_row6_col0" class="data row6 col0" >0.19</td>
+      <td id="T_d6af5_row6_col1" class="data row6 col1" >0.23</td>
+      <td id="T_d6af5_row6_col2" class="data row6 col2" >0.19</td>
+      <td id="T_d6af5_row6_col3" class="data row6 col3" >0.19</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row7" class="row_heading level0 row7" >ACCESS-ESM1-5</th>
-      <td id="T_5ee3b_row7_col0" class="data row7 col0" >0.20</td>
-      <td id="T_5ee3b_row7_col1" class="data row7 col1" >0.18</td>
-      <td id="T_5ee3b_row7_col2" class="data row7 col2" >0.22</td>
-      <td id="T_5ee3b_row7_col3" class="data row7 col3" >0.20</td>
+      <th id="T_d6af5_level0_row7" class="row_heading level0 row7" >ACCESS-ESM1-5</th>
+      <td id="T_d6af5_row7_col0" class="data row7 col0" >0.20</td>
+      <td id="T_d6af5_row7_col1" class="data row7 col1" >0.18</td>
+      <td id="T_d6af5_row7_col2" class="data row7 col2" >0.22</td>
+      <td id="T_d6af5_row7_col3" class="data row7 col3" >0.20</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row8" class="row_heading level0 row8" >IPSL-CM5A2-INCA</th>
-      <td id="T_5ee3b_row8_col0" class="data row8 col0" >0.18</td>
-      <td id="T_5ee3b_row8_col1" class="data row8 col1" >nan</td>
-      <td id="T_5ee3b_row8_col2" class="data row8 col2" >0.22</td>
-      <td id="T_5ee3b_row8_col3" class="data row8 col3" >nan</td>
+      <th id="T_d6af5_level0_row8" class="row_heading level0 row8" >IPSL-CM5A2-INCA</th>
+      <td id="T_d6af5_row8_col0" class="data row8 col0" >0.18</td>
+      <td id="T_d6af5_row8_col1" class="data row8 col1" >nan</td>
+      <td id="T_d6af5_row8_col2" class="data row8 col2" >0.22</td>
+      <td id="T_d6af5_row8_col3" class="data row8 col3" >nan</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row9" class="row_heading level0 row9" >KACE-1-0-G</th>
-      <td id="T_5ee3b_row9_col0" class="data row9 col0" >0.20</td>
-      <td id="T_5ee3b_row9_col1" class="data row9 col1" >0.20</td>
-      <td id="T_5ee3b_row9_col2" class="data row9 col2" >0.20</td>
-      <td id="T_5ee3b_row9_col3" class="data row9 col3" >0.19</td>
+      <th id="T_d6af5_level0_row9" class="row_heading level0 row9" >KACE-1-0-G</th>
+      <td id="T_d6af5_row9_col0" class="data row9 col0" >0.20</td>
+      <td id="T_d6af5_row9_col1" class="data row9 col1" >0.20</td>
+      <td id="T_d6af5_row9_col2" class="data row9 col2" >0.20</td>
+      <td id="T_d6af5_row9_col3" class="data row9 col3" >0.19</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row10" class="row_heading level0 row10" >CMCC-ESM2</th>
-      <td id="T_5ee3b_row10_col0" class="data row10 col0" >0.19</td>
-      <td id="T_5ee3b_row10_col1" class="data row10 col1" >0.17</td>
-      <td id="T_5ee3b_row10_col2" class="data row10 col2" >0.19</td>
-      <td id="T_5ee3b_row10_col3" class="data row10 col3" >0.19</td>
+      <th id="T_d6af5_level0_row10" class="row_heading level0 row10" >CMCC-ESM2</th>
+      <td id="T_d6af5_row10_col0" class="data row10 col0" >0.19</td>
+      <td id="T_d6af5_row10_col1" class="data row10 col1" >0.17</td>
+      <td id="T_d6af5_row10_col2" class="data row10 col2" >0.19</td>
+      <td id="T_d6af5_row10_col3" class="data row10 col3" >0.19</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row11" class="row_heading level0 row11" >CAMS-CSM1-0</th>
-      <td id="T_5ee3b_row11_col0" class="data row11 col0" >0.18</td>
-      <td id="T_5ee3b_row11_col1" class="data row11 col1" >0.17</td>
-      <td id="T_5ee3b_row11_col2" class="data row11 col2" >0.19</td>
-      <td id="T_5ee3b_row11_col3" class="data row11 col3" >0.20</td>
+      <th id="T_d6af5_level0_row11" class="row_heading level0 row11" >CAMS-CSM1-0</th>
+      <td id="T_d6af5_row11_col0" class="data row11 col0" >0.18</td>
+      <td id="T_d6af5_row11_col1" class="data row11 col1" >0.17</td>
+      <td id="T_d6af5_row11_col2" class="data row11 col2" >0.19</td>
+      <td id="T_d6af5_row11_col3" class="data row11 col3" >0.20</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row12" class="row_heading level0 row12" >CMCC-CM2-SR5</th>
-      <td id="T_5ee3b_row12_col0" class="data row12 col0" >0.19</td>
-      <td id="T_5ee3b_row12_col1" class="data row12 col1" >0.17</td>
-      <td id="T_5ee3b_row12_col2" class="data row12 col2" >0.20</td>
-      <td id="T_5ee3b_row12_col3" class="data row12 col3" >0.18</td>
+      <th id="T_d6af5_level0_row12" class="row_heading level0 row12" >CMCC-CM2-SR5</th>
+      <td id="T_d6af5_row12_col0" class="data row12 col0" >0.19</td>
+      <td id="T_d6af5_row12_col1" class="data row12 col1" >0.17</td>
+      <td id="T_d6af5_row12_col2" class="data row12 col2" >0.20</td>
+      <td id="T_d6af5_row12_col3" class="data row12 col3" >0.18</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row13" class="row_heading level0 row13" >GFDL-ESM4</th>
-      <td id="T_5ee3b_row13_col0" class="data row13 col0" >0.17</td>
-      <td id="T_5ee3b_row13_col1" class="data row13 col1" >0.19</td>
-      <td id="T_5ee3b_row13_col2" class="data row13 col2" >0.19</td>
-      <td id="T_5ee3b_row13_col3" class="data row13 col3" >0.18</td>
+      <th id="T_d6af5_level0_row13" class="row_heading level0 row13" >GFDL-ESM4</th>
+      <td id="T_d6af5_row13_col0" class="data row13 col0" >0.17</td>
+      <td id="T_d6af5_row13_col1" class="data row13 col1" >0.19</td>
+      <td id="T_d6af5_row13_col2" class="data row13 col2" >0.19</td>
+      <td id="T_d6af5_row13_col3" class="data row13 col3" >0.18</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row14" class="row_heading level0 row14" >E3SM-1-1</th>
-      <td id="T_5ee3b_row14_col0" class="data row14 col0" >nan</td>
-      <td id="T_5ee3b_row14_col1" class="data row14 col1" >nan</td>
-      <td id="T_5ee3b_row14_col2" class="data row14 col2" >nan</td>
-      <td id="T_5ee3b_row14_col3" class="data row14 col3" >0.18</td>
+      <th id="T_d6af5_level0_row14" class="row_heading level0 row14" >E3SM-1-1</th>
+      <td id="T_d6af5_row14_col0" class="data row14 col0" >nan</td>
+      <td id="T_d6af5_row14_col1" class="data row14 col1" >nan</td>
+      <td id="T_d6af5_row14_col2" class="data row14 col2" >nan</td>
+      <td id="T_d6af5_row14_col3" class="data row14 col3" >0.18</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row15" class="row_heading level0 row15" >MPI-ESM1-2-LR</th>
-      <td id="T_5ee3b_row15_col0" class="data row15 col0" >0.17</td>
-      <td id="T_5ee3b_row15_col1" class="data row15 col1" >0.16</td>
-      <td id="T_5ee3b_row15_col2" class="data row15 col2" >0.19</td>
-      <td id="T_5ee3b_row15_col3" class="data row15 col3" >0.18</td>
+      <th id="T_d6af5_level0_row15" class="row_heading level0 row15" >MPI-ESM1-2-LR</th>
+      <td id="T_d6af5_row15_col0" class="data row15 col0" >0.17</td>
+      <td id="T_d6af5_row15_col1" class="data row15 col1" >0.16</td>
+      <td id="T_d6af5_row15_col2" class="data row15 col2" >0.19</td>
+      <td id="T_d6af5_row15_col3" class="data row15 col3" >0.18</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row16" class="row_heading level0 row16" >ACCESS-CM2</th>
-      <td id="T_5ee3b_row16_col0" class="data row16 col0" >0.16</td>
-      <td id="T_5ee3b_row16_col1" class="data row16 col1" >0.17</td>
-      <td id="T_5ee3b_row16_col2" class="data row16 col2" >0.18</td>
-      <td id="T_5ee3b_row16_col3" class="data row16 col3" >0.18</td>
+      <th id="T_d6af5_level0_row16" class="row_heading level0 row16" >ACCESS-CM2</th>
+      <td id="T_d6af5_row16_col0" class="data row16 col0" >0.16</td>
+      <td id="T_d6af5_row16_col1" class="data row16 col1" >0.17</td>
+      <td id="T_d6af5_row16_col2" class="data row16 col2" >0.18</td>
+      <td id="T_d6af5_row16_col3" class="data row16 col3" >0.18</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row17" class="row_heading level0 row17" >IPSL-CM6A-LR</th>
-      <td id="T_5ee3b_row17_col0" class="data row17 col0" >0.17</td>
-      <td id="T_5ee3b_row17_col1" class="data row17 col1" >0.15</td>
-      <td id="T_5ee3b_row17_col2" class="data row17 col2" >0.19</td>
-      <td id="T_5ee3b_row17_col3" class="data row17 col3" >0.18</td>
+      <th id="T_d6af5_level0_row17" class="row_heading level0 row17" >IPSL-CM6A-LR</th>
+      <td id="T_d6af5_row17_col0" class="data row17 col0" >0.17</td>
+      <td id="T_d6af5_row17_col1" class="data row17 col1" >0.15</td>
+      <td id="T_d6af5_row17_col2" class="data row17 col2" >0.19</td>
+      <td id="T_d6af5_row17_col3" class="data row17 col3" >0.18</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row18" class="row_heading level0 row18" >E3SM-1-0</th>
-      <td id="T_5ee3b_row18_col0" class="data row18 col0" >nan</td>
-      <td id="T_5ee3b_row18_col1" class="data row18 col1" >nan</td>
-      <td id="T_5ee3b_row18_col2" class="data row18 col2" >nan</td>
-      <td id="T_5ee3b_row18_col3" class="data row18 col3" >0.17</td>
+      <th id="T_d6af5_level0_row18" class="row_heading level0 row18" >E3SM-1-0</th>
+      <td id="T_d6af5_row18_col0" class="data row18 col0" >nan</td>
+      <td id="T_d6af5_row18_col1" class="data row18 col1" >nan</td>
+      <td id="T_d6af5_row18_col2" class="data row18 col2" >nan</td>
+      <td id="T_d6af5_row18_col3" class="data row18 col3" >0.17</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row19" class="row_heading level0 row19" >NESM3</th>
-      <td id="T_5ee3b_row19_col0" class="data row19 col0" >0.16</td>
-      <td id="T_5ee3b_row19_col1" class="data row19 col1" >0.17</td>
-      <td id="T_5ee3b_row19_col2" class="data row19 col2" >nan</td>
-      <td id="T_5ee3b_row19_col3" class="data row19 col3" >0.17</td>
+      <th id="T_d6af5_level0_row19" class="row_heading level0 row19" >NESM3</th>
+      <td id="T_d6af5_row19_col0" class="data row19 col0" >0.16</td>
+      <td id="T_d6af5_row19_col1" class="data row19 col1" >0.17</td>
+      <td id="T_d6af5_row19_col2" class="data row19 col2" >nan</td>
+      <td id="T_d6af5_row19_col3" class="data row19 col3" >0.17</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row20" class="row_heading level0 row20" >E3SM-1-1-ECA</th>
-      <td id="T_5ee3b_row20_col0" class="data row20 col0" >nan</td>
-      <td id="T_5ee3b_row20_col1" class="data row20 col1" >nan</td>
-      <td id="T_5ee3b_row20_col2" class="data row20 col2" >nan</td>
-      <td id="T_5ee3b_row20_col3" class="data row20 col3" >0.16</td>
+      <th id="T_d6af5_level0_row20" class="row_heading level0 row20" >E3SM-1-1-ECA</th>
+      <td id="T_d6af5_row20_col0" class="data row20 col0" >nan</td>
+      <td id="T_d6af5_row20_col1" class="data row20 col1" >nan</td>
+      <td id="T_d6af5_row20_col2" class="data row20 col2" >nan</td>
+      <td id="T_d6af5_row20_col3" class="data row20 col3" >0.16</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row21" class="row_heading level0 row21" >CAS-ESM2-0</th>
-      <td id="T_5ee3b_row21_col0" class="data row21 col0" >0.17</td>
-      <td id="T_5ee3b_row21_col1" class="data row21 col1" >0.15</td>
-      <td id="T_5ee3b_row21_col2" class="data row21 col2" >0.16</td>
-      <td id="T_5ee3b_row21_col3" class="data row21 col3" >0.16</td>
+      <th id="T_d6af5_level0_row21" class="row_heading level0 row21" >CAS-ESM2-0</th>
+      <td id="T_d6af5_row21_col0" class="data row21 col0" >0.17</td>
+      <td id="T_d6af5_row21_col1" class="data row21 col1" >0.15</td>
+      <td id="T_d6af5_row21_col2" class="data row21 col2" >0.16</td>
+      <td id="T_d6af5_row21_col3" class="data row21 col3" >0.16</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row22" class="row_heading level0 row22" >FGOALS-g3</th>
-      <td id="T_5ee3b_row22_col0" class="data row22 col0" >0.15</td>
-      <td id="T_5ee3b_row22_col1" class="data row22 col1" >0.16</td>
-      <td id="T_5ee3b_row22_col2" class="data row22 col2" >0.17</td>
-      <td id="T_5ee3b_row22_col3" class="data row22 col3" >0.17</td>
+      <th id="T_d6af5_level0_row22" class="row_heading level0 row22" >FGOALS-g3</th>
+      <td id="T_d6af5_row22_col0" class="data row22 col0" >0.15</td>
+      <td id="T_d6af5_row22_col1" class="data row22 col1" >0.16</td>
+      <td id="T_d6af5_row22_col2" class="data row22 col2" >0.17</td>
+      <td id="T_d6af5_row22_col3" class="data row22 col3" >0.17</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row23" class="row_heading level0 row23" >BCC-CSM2-MR</th>
-      <td id="T_5ee3b_row23_col0" class="data row23 col0" >0.16</td>
-      <td id="T_5ee3b_row23_col1" class="data row23 col1" >0.15</td>
-      <td id="T_5ee3b_row23_col2" class="data row23 col2" >0.16</td>
-      <td id="T_5ee3b_row23_col3" class="data row23 col3" >0.16</td>
+      <th id="T_d6af5_level0_row23" class="row_heading level0 row23" >BCC-CSM2-MR</th>
+      <td id="T_d6af5_row23_col0" class="data row23 col0" >0.16</td>
+      <td id="T_d6af5_row23_col1" class="data row23 col1" >0.15</td>
+      <td id="T_d6af5_row23_col2" class="data row23 col2" >0.15</td>
+      <td id="T_d6af5_row23_col3" class="data row23 col3" >0.16</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row24" class="row_heading level0 row24" >CanESM5-1</th>
-      <td id="T_5ee3b_row24_col0" class="data row24 col0" >0.15</td>
-      <td id="T_5ee3b_row24_col1" class="data row24 col1" >0.13</td>
-      <td id="T_5ee3b_row24_col2" class="data row24 col2" >0.14</td>
-      <td id="T_5ee3b_row24_col3" class="data row24 col3" >0.13</td>
+      <th id="T_d6af5_level0_row24" class="row_heading level0 row24" >CanESM5-1</th>
+      <td id="T_d6af5_row24_col0" class="data row24 col0" >0.15</td>
+      <td id="T_d6af5_row24_col1" class="data row24 col1" >0.13</td>
+      <td id="T_d6af5_row24_col2" class="data row24 col2" >0.14</td>
+      <td id="T_d6af5_row24_col3" class="data row24 col3" >0.13</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row25" class="row_heading level0 row25" >INM-CM5-0</th>
-      <td id="T_5ee3b_row25_col0" class="data row25 col0" >0.13</td>
-      <td id="T_5ee3b_row25_col1" class="data row25 col1" >0.13</td>
-      <td id="T_5ee3b_row25_col2" class="data row25 col2" >0.14</td>
-      <td id="T_5ee3b_row25_col3" class="data row25 col3" >0.13</td>
+      <th id="T_d6af5_level0_row25" class="row_heading level0 row25" >INM-CM5-0</th>
+      <td id="T_d6af5_row25_col0" class="data row25 col0" >0.13</td>
+      <td id="T_d6af5_row25_col1" class="data row25 col1" >0.13</td>
+      <td id="T_d6af5_row25_col2" class="data row25 col2" >0.14</td>
+      <td id="T_d6af5_row25_col3" class="data row25 col3" >0.13</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row26" class="row_heading level0 row26" >CanESM5</th>
-      <td id="T_5ee3b_row26_col0" class="data row26 col0" >0.14</td>
-      <td id="T_5ee3b_row26_col1" class="data row26 col1" >0.12</td>
-      <td id="T_5ee3b_row26_col2" class="data row26 col2" >0.13</td>
-      <td id="T_5ee3b_row26_col3" class="data row26 col3" >0.13</td>
+      <th id="T_d6af5_level0_row26" class="row_heading level0 row26" >CanESM5</th>
+      <td id="T_d6af5_row26_col0" class="data row26 col0" >0.14</td>
+      <td id="T_d6af5_row26_col1" class="data row26 col1" >0.12</td>
+      <td id="T_d6af5_row26_col2" class="data row26 col2" >0.13</td>
+      <td id="T_d6af5_row26_col3" class="data row26 col3" >0.13</td>
     </tr>
     <tr>
-      <th id="T_5ee3b_level0_row27" class="row_heading level0 row27" >INM-CM4-8</th>
-      <td id="T_5ee3b_row27_col0" class="data row27 col0" >0.13</td>
-      <td id="T_5ee3b_row27_col1" class="data row27 col1" >0.12</td>
-      <td id="T_5ee3b_row27_col2" class="data row27 col2" >0.14</td>
-      <td id="T_5ee3b_row27_col3" class="data row27 col3" >0.13</td>
+      <th id="T_d6af5_level0_row27" class="row_heading level0 row27" >INM-CM4-8</th>
+      <td id="T_d6af5_row27_col0" class="data row27 col0" >0.13</td>
+      <td id="T_d6af5_row27_col1" class="data row27 col1" >0.12</td>
+      <td id="T_d6af5_row27_col2" class="data row27 col2" >0.14</td>
+      <td id="T_d6af5_row27_col3" class="data row27 col3" >0.13</td>
     </tr>
   </tbody>
 </table>
@@ -2101,3 +2097,115 @@ for variable_name in variable_names:
     Write: results\2023-05-30T18.58\tos.enspctl10.nc
     Write: results\2023-05-30T18.58\tos.enspctl90.nc
     
+
+## Post processing
+
+In the following we derive predictions of cumulative rainfall indices covering the growing seasons of the main crops. We first load the data on the growing season from the `data/crop/` folder. The data is assumed to be on the same grid as the EOFs.
+
+
+```python
+crop_file = 'data/crop/soy_rf_ggcmi_crop_calendar_phase3_v1.01_1dgr.nc'
+```
+
+
+```python
+crop_variables, _, _ = fileio.read_netcdf(filename=crop_file)
+print('Available data:', {k: v.shape for k, v in crop_variables.items()})
+```
+
+    Available data: {'planting_day': (43, 46), 'maturity_day': (43, 46), 'growing_season_length': (43, 46), 'data_source_used': (43, 46)}
+    
+
+We load the netCDF files with the VAE output for further post-processing.
+
+
+```python
+filename = os.path.join(EXPORT_DIR, variable_names[0] + '*.nc')
+result_variables, result_dimensions, result_attributes = fileio.read_netcdf_multi(filename=filename, num2date=True)
+print(*list(result_variables.keys()), sep='\n')
+```
+
+    results\2023-05-30T18.58\pr*.nc : 4 file(s) found.
+    4/4 [==============================] - 1s 213ms/file
+    results\2023-05-30T18.58\pr.ensmean.nc
+    results\2023-05-30T18.58\pr.ensmedian.nc
+    results\2023-05-30T18.58\pr.enspctl10.nc
+    results\2023-05-30T18.58\pr.enspctl90.nc
+    
+
+
+```python
+planting_day = crop_variables['planting_day']
+growing_season_length = crop_variables['growing_season_length']
+```
+
+We obtain the cumulative values for each of the loaded VAE outputs and write the results to netCDF files with the prefix `cum_` preprended to the filename. THe files are saved in the same folder as the VAE output files.
+
+
+```python
+for filename, values in result_variables.items():
+    # monthly values refer to end month (M = month end frequency)
+    source_time = pd.to_datetime(result_dimensions[filename]['time']).snap('M')
+    # new time is Jan-01 of each year (YS = year start frequency)
+    target_time = source_time.snap('YS').unique()
+
+    # iterate over variables
+    out_values = dict()
+    for key, value in values.items():
+        out_value = np.full((len(target_time), *value.shape[1:]), fill_value=np.nan, dtype=value.dtype)
+
+        # iterate over grid points
+        pbar = ks.utils.Progbar(value.shape[-1], unit_name='Longitude')
+        for lon_idx in range(value.shape[-1]):
+            pbar.add(1)
+            for lat_idx in range(value.shape[-2]):
+                if np.all(np.isnan(value[..., lat_idx, lon_idx])):
+                    continue
+
+                # converting data to Dataframe makes datetime manipulations easier
+                df = pd.DataFrame(value[..., lat_idx, lon_idx], index=source_time)
+
+                # get total cumulative rainfall at grid point
+                df = df.cumsum(axis=0)
+
+                # interpolate on daily time scales to account for fraction of month (slower computation!)
+                df = df.asfreq('D').interpolate('linear')
+
+                # get start and end dates of crop seasons
+                start_time = target_time + pd.to_timedelta(planting_day[lat_idx, lon_idx] - 1, unit='D')
+                end_time = start_time + pd.to_timedelta(growing_season_length[lat_idx, lon_idx], unit='D')
+
+                # get cumulative rainfall from difference between end and start of crop season
+                start_value = df.reindex(index=start_time, method='nearest').to_numpy()
+                end_value = df.reindex(index=end_time, method='nearest').to_numpy()
+                out_value[..., lat_idx, lon_idx] = end_value - start_value
+
+        out_values[key] = out_value
+
+    out_filename = os.path.join(os.path.dirname(filename), 'cum_' + os.path.basename(filename))
+    fileio.write_netcdf(out_filename,
+                        variables=out_values,
+                        dimensions=result_dimensions[filename] | {'time': target_time},
+                        attributes=result_attributes[filename])
+```
+
+    46/46 [==============================] - 12s 258ms/Longitude
+    Write: results\2023-05-30T18.58\cum_pr.ensmean.nc
+    46/46 [==============================] - 11s 248ms/Longitude
+    Write: results\2023-05-30T18.58\cum_pr.ensmedian.nc
+    46/46 [==============================] - 11s 251ms/Longitude
+    Write: results\2023-05-30T18.58\cum_pr.enspctl10.nc
+    46/46 [==============================] - 11s 247ms/Longitude
+    Write: results\2023-05-30T18.58\cum_pr.enspctl90.nc
+    
+
+### Remark on country averages
+
+To extract country averages from the gridded cumulative rainfall data, we can use the CDO operators `fldmean` and `maskregion`. For example, we can use the following command
+
+```shell
+cdo fldmean -maskregion,dcw:TZ infile.nc outfile.nc
+```
+to extract the country average for Tanzania. To extract the country average for another country, we can replace `TZ` with the corresponding country code. For more details, see the [CDO documentation](https://code.mpimet.mpg.de/projects/cdo/embedded/cdo.pdf) and the list of [country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+
+To use country codes together with the `maskregion` operator, we need to install the `gmt-dcw` package, which is available in the Ubuntu repositories. To install the package, run `sudo apt install gmt-dcw` and set the environment variable `DCW_DIR` to the path of the `dcw-gmt` folder, e.g. `export DIR_CW=/usr/share/gmt-dcw/`.
