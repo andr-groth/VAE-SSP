@@ -114,7 +114,7 @@ else:
 ```
 
     Continue training from epoch 25 in: logs\2023-05-30T18.58
-    
+
 
 ## Parameters
 
@@ -229,7 +229,7 @@ params = SimpleNamespace(**params)
 ```
 
     Load configuration from: logs\2023-05-30T18.58\trainer_config.yaml
-    
+
 
 ## Model
 
@@ -301,9 +301,9 @@ ks.utils.plot_model(model, show_shapes=True, dpi=75, rankdir='LR')
 
 
 
-    
+
 ![png](VAEp_train_files/VAEp_train_37_0.png)
-    
+
 
 
 
@@ -316,35 +316,35 @@ model.summary(line_length=120)
 
     Model: "mVAEp"
     ________________________________________________________________________________________________________________________
-    Layer (type)                           Output Shape               Param #       Connected to                            
+    Layer (type)                           Output Shape               Param #       Connected to
     ========================================================================================================================
-    encoder_input (InputLayer)             [(None, 1, 12, 40)]        0                                                     
+    encoder_input (InputLayer)             [(None, 1, 12, 40)]        0
     ________________________________________________________________________________________________________________________
-    encoder_cond (InputLayer)              [(None, 1, 57)]            0                                                     
+    encoder_cond (InputLayer)              [(None, 1, 57)]            0
     ________________________________________________________________________________________________________________________
-    encoder (Functional)                   [(None, 32), (None, 32)]   185340        encoder_input[0][0]                     
-                                                                                    encoder_cond[0][0]                      
+    encoder (Functional)                   [(None, 32), (None, 32)]   185340        encoder_input[0][0]
+                                                                                    encoder_cond[0][0]
     ________________________________________________________________________________________________________________________
-    latent (Functional)                    (None, 1, 32)              0             encoder[0][0]                           
-                                                                                    encoder[0][1]                           
+    latent (Functional)                    (None, 1, 32)              0             encoder[0][0]
+                                                                                    encoder[0][1]
     ________________________________________________________________________________________________________________________
-    decoder_cond (InputLayer)              [(None, 1, 57)]            0                                                     
+    decoder_cond (InputLayer)              [(None, 1, 57)]            0
     ________________________________________________________________________________________________________________________
-    prediction_cond (InputLayer)           [(None, 1, 57)]            0                                                     
+    prediction_cond (InputLayer)           [(None, 1, 57)]            0
     ________________________________________________________________________________________________________________________
-    beta (InputLayer)                      [(None, 1)]                0                                                     
+    beta (InputLayer)                      [(None, 1)]                0
     ________________________________________________________________________________________________________________________
-    decoder (Functional)                   (None, 1, 12, 40)          213412        latent[0][0]                            
-                                                                                    decoder_cond[0][0]                      
+    decoder (Functional)                   (None, 1, 12, 40)          213412        latent[0][0]
+                                                                                    decoder_cond[0][0]
     ________________________________________________________________________________________________________________________
-    prediction (Functional)                (None, 1, 12, 40)          213412        latent[0][0]                            
-                                                                                    prediction_cond[0][0]                   
+    prediction (Functional)                (None, 1, 12, 40)          213412        latent[0][0]
+                                                                                    prediction_cond[0][0]
     ========================================================================================================================
     Total params: 612,164
     Trainable params: 609,620
     Non-trainable params: 2,544
     ________________________________________________________________________________________________________________________
-    
+
 
 ### Load model weights (optional)
 
@@ -359,7 +359,7 @@ if INITIAL_EPOCH > 0:
 ```
 
     Load model weights from: logs\2023-05-30T18.58\model.25.h5
-    
+
 
 ## Data
 
@@ -379,7 +379,7 @@ _variables, _dimensions, _attributes = fileio.read_netcdf_multi(**params.data, n
     data\cmip6\ssp\pr\pcs\pcs*.nc  : 100 file(s) found.
     data\cmip6\ssp\tos\pcs\pcs*.nc : 100 file(s) found.
     200/200 [==============================] - 19s 97ms/file
-    
+
 
 We group the netCDF files and their variables by the global attributes `source_id` + `experiment_id`. The attribute `source_id` refers to the model name (e.g. `ACCESS-CM2`) and the attribute `experiment_id` to the experiment (e.g. `ssp126`).
 
@@ -427,7 +427,7 @@ else:
 
     ✓ One variable combination found: ('pr', 'tos')
     ✓ One channel combination found: (20, 20)
-    
+
 
 The following table summarizes the models and their different runs.
 
@@ -440,7 +440,7 @@ display(df.replace(0, ''))
 ```
 
     Number of model runs found : 100
-    
+
 
 
 <div>
@@ -718,15 +718,15 @@ for variable_name in variable_names:
 ```
 
 
-    
+
 ![png](VAEp_train_files/VAEp_train_56_0.png)
-    
 
 
 
-    
+
+
 ![png](VAEp_train_files/VAEp_train_56_1.png)
-    
+
 
 
 We compare the variance of the different CMIP runs.
@@ -760,9 +760,9 @@ for (uax, bax), variable_name in zip(axs.T, variable_names):
 ```
 
 
-    
+
 ![png](VAEp_train_files/VAEp_train_58_0.png)
-    
+
 
 
 #### Stack variables
@@ -799,7 +799,7 @@ print('Size of validation dataset :', len(dataset[validation_split:]))
 
     Size of training dataset   : 70
     Size of validation dataset : 30
-    
+
 
 ### Forcing data
 
@@ -813,7 +813,7 @@ print('Load forcing data from:', os.path.relpath(filename))
 ```
 
     Load forcing data from: data\cmip6\ssp\forcings\SSP_CMIP6_world_C02.csv
-    
+
 
 
 ```python
@@ -832,9 +832,9 @@ ax.grid(linestyle=':')
 ```
 
 
-    
+
 ![png](VAEp_train_files/VAEp_train_70_0.png)
-    
+
 
 
 Instead of providing only the current value of the forcing as condition, we can optionally provide past values as well. The parameter `input_length` in `params.forcing` determines the number of past values (in years) that will be provided as condition.
@@ -859,7 +859,7 @@ forcing_data = [
 
 #### Beta scheduler
 
-For the model training, we first need a scheduler for the beta values in each epoch that scales the KL loss. 
+For the model training, we first need a scheduler for the beta values in each epoch that scales the KL loss.
 
 
 ```python
@@ -874,7 +874,7 @@ beta_scheduler.summary()
       upper    : 50
       midpoint : 5
       rate     : 1
-    
+
 
 #### Fit generator
 
@@ -918,7 +918,7 @@ fit_gen.summary()
       targets
         decoder          : (640, 1, 12, 40)
         prediction       : (640, 1, 12, 40)
-    
+
 
 #### Validation generator
 
@@ -964,7 +964,7 @@ else:
       targets
         decoder          : (640, 1, 12, 40)
         prediction       : (640, 1, 12, 40)
-    
+
 
 ### Prepare callbacks
 
@@ -997,45 +997,3 @@ hist = model.fit(fit_gen,
 
 
     0epoch [00:00, ?epoch/s]
-
-
-## Appendix
-
-### Weights of conditional layers
-
-
-```python
-weights = {w.name.split(':')[0]: K.get_value(w) for w in model.weights if 'cond' in w.name}
-keys = sorted(weights.keys())
-
-key_groups = [list(g) for k, g in itertools.groupby(keys, lambda x: x.split('_')[0])]
-rows = len(key_groups)
-cols = max([len(key_group) for key_group in key_groups])
-```
-
-
-```python
-fig_args = dict(nrows=rows, ncols=cols, figsize=(3 * cols, 3 * rows), sharex=True, sharey=True, squeeze=False)
-plt_args = {'vmin': -0.3, 'vmax': 0.3, 'cmap': plt.get_cmap('bwr', 18)}
-fig, axs = plt.subplots(**fig_args)
-for ax_row, key_group in zip(axs, key_groups):
-    for uax, key in zip(ax_row, key_group):
-        values = weights[key]
-        shape = values.shape
-        values = np.squeeze(values)
-        values = np.atleast_2d(values)
-        im = uax.pcolormesh(values, **plt_args)
-        uax.set_title(f'{key}\n {shape=}', fontsize=9)
-        uax.xaxis.set_major_locator(ticker.MaxNLocator(integer=True))
-        uax.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
-
-plt.setp(axs[-1, :], 'xlabel', 'Output')
-plt.setp(axs[:, 0], 'ylabel', 'Input')
-_ = fig.colorbar(im, ax=axs[0, -1], extend='both')
-```
-
-
-    
-![png](VAEp_train_files/VAEp_train_93_0.png)
-    
-
