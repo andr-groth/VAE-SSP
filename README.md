@@ -19,6 +19,12 @@ The Jupyter notebooks demonstrate the process of training and exploring a Variat
     For more information on the data preparation see [`data/README.md`](/data/README.md).
 
 
-## Examples
+## Usage
 
-For example runs of the Jupyter notebooks see the [`examples/`](/examples/) folder of this repository. The examples are based on the sample data in the [`data/`](/data/) folder.
+This repository contains two Jupyter notebooks for model training and prediction:
+
+- To train a VAE on a range of different GHG emission scenarios: [`VAEp_train.ipynb`](VAEp_train.ipynb)
+
+- To make predictions with the VAE on new GHG emission scenarios: [`VAEp_explore.ipynb`](VAEp_explore.ipynb)
+
+The notebooks use data provided in the [`data/`](/data/) folder in this repository.
