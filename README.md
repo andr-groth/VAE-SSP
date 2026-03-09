@@ -1,4 +1,4 @@
-# Decadal prediction of climate data subject to different GHG emission scenarios using a variational autoencoder
+# Decadal prediction of climate data subject to different Greenhouse Gas emission scenarios using a variational autoencoder
 
 ## Overview
 
@@ -23,8 +23,17 @@ The Jupyter notebooks demonstrate the process of training and exploring a Variat
 
 This repository contains two Jupyter notebooks for model training and prediction:
 
-1. To train a VAE on a range of different GHG emission scenarios: [`VAEp_train.ipynb`](VAEp_train.ipynb)
+1. To train a VAE on a range of different Greenhouse Gas (GHG) emission scenarios: [`VAEp_train.ipynb`](VAEp_train.ipynb)
 
 2. To make predictions with the VAE on new GHG emission scenarios: [`VAEp_explore.ipynb`](VAEp_explore.ipynb)
 
 The notebooks use data provided in the [`data/`](/data/) folder in this repository.
+
+
+## Results
+
+The work is published in
+
+> Groth, 2023: Decadal agricultural production risk prediction subject to different Greenhouse Gas emission scenarios in African countries. Technical report.
+
+The report is available at [`report/VAE-SSP.pdf`](/report/VAE-SSP.pdf)  in this repository.
